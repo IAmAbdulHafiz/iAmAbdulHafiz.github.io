@@ -82,7 +82,7 @@ body {
 }
 
 /* Features Section */
-.features {
+/*.features {
     background-color: #fff;
     padding: 5rem 0;
 }
@@ -115,8 +115,40 @@ body {
     font-size: 1rem;
     text-align: center;
 }
-
+*/
 /* About Section */
+
+.feature {
+    position: relative;
+    display: inline-block;
+}
+
+.feature img {
+    width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Keeps image aspect ratio */
+}
+
+.feature .content {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Centers the content */
+    color: white; /* Text color for contrast */
+    text-align: center; /* Centers the text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px; /* Padding around the text */
+    width: 80%; /* Adjust for desired text width */
+}
+
+.feature .content h3 {
+    font-size: 24px; /* Adjust for desired size */
+    margin-bottom: 10px;
+}
+
+.feature .content p {
+    font-size: 16px; /* Adjust for desired size */
+}
+
 .about {
     padding: 5rem 0;
     background-color: #f4f4f4;
