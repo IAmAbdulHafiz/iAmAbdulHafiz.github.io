@@ -22,17 +22,21 @@ body {
 .navbar {
     background-color: #333;
     padding: 1rem 0;
+    height: 70px;
 }
 
 .logo {
     color: #fff;
     font-size: 1.5rem;
+    float: left;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    float: right;
+    margin-top: 10px;
 }
 
 .nav-links a {
@@ -45,30 +49,46 @@ body {
     color: #e67e22;
 }
 
-/* Intro Section */
 .intro {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    position: relative;
+    background: url('img/bg1.jpg') no-repeat center center/cover;
     color: #fff;
     padding: 5rem 0;
     text-align: center;
+    height: 700px;
+    overflow: hidden;
 }
 
-.intro .cover-img {
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.37); /* Dark overlay with 50% opacity */
+    z-index: 1; /* Places the overlay behind the text */
+}
+.intro .container {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
 }
 
 .intro h2 {
     font-size: 3rem;
     margin-top: 1.5rem;
+    
 }
 
 .intro p {
     font-size: 1.2rem;
     margin-top: 1rem;
+    color: #e67e22;
 }
 
 .btn {
+    position: relative;
+    top: 100px;
     padding: 0.8rem 2rem;
     background-color: #e67e22;
     color: #fff;
@@ -82,7 +102,7 @@ body {
 }
 
 /* Features Section */
-/*.features {
+.features {
     background-color: #fff;
     padding: 5rem 0;
 }
@@ -101,7 +121,7 @@ body {
 
 .feature img {
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
@@ -115,39 +135,8 @@ body {
     font-size: 1rem;
     text-align: center;
 }
-*/
+
 /* About Section */
-
-.feature {
-    position: relative;
-    display: inline-block;
-}
-
-.feature img {
-    width: 100%; /* Ensures the image is responsive */
-    height: auto; /* Keeps image aspect ratio */
-}
-
-.feature .content {
-    position: absolute;
-    top: 50%; /* Adjust as needed */
-    left: 50%; /* Adjust as needed */
-    transform: translate(-50%, -50%); /* Centers the content */
-    color: white; /* Text color for contrast */
-    text-align: center; /* Centers the text */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 20px; /* Padding around the text */
-    width: 80%; /* Adjust for desired text width */
-}
-
-.feature .content h3 {
-    font-size: 24px; /* Adjust for desired size */
-    margin-bottom: 10px;
-}
-
-.feature .content p {
-    font-size: 16px; /* Adjust for desired size */
-}
 
 .about {
     padding: 5rem 0;
